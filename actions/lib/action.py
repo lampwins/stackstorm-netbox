@@ -31,6 +31,6 @@ class NetboxBaseAction(Action):
             'Accept': 'application/json'
         }
 
-        r = requests.get(endpoint_uri, verify=self.config['ssl_verify'])
+        r = requests.get(url, verify=self.config['ssl_verify'], headers=headers)
 
         return {'raw': r.json()}
