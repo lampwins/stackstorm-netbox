@@ -18,6 +18,8 @@ class NetboxBaseAction(Action):
     def get(self, endpoint_uri):
         """Make a get request to the API URI passed in
         """
+
+        self.logger.info("self.config['use_https']: %s", self.config['use_https'])
         
         if self.config['use_https']:
             url = 'https://'
