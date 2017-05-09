@@ -1,0 +1,13 @@
+---
+name: get_device
+pack: netbox
+runner_type: "python-script"
+description: Get a device from netbox by serial number
+enabled: true
+entry_point: get_device.py
+parameters:
+    serial:
+        type: string
+        description: Serial number of the device
+        required: true
+        position: 1
