@@ -19,7 +19,7 @@ class NetboxBaseAction(Action):
         """Make a get request to the API URI passed in
         """
         
-        if self.config['use_ssl']:
+        if self.config['use_https']:
             url = 'https://'
         else:
             url = 'http://'
