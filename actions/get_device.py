@@ -1,5 +1,5 @@
 
-from lib.action import NetboxBaseAction
+from .lib.action import NetboxBaseAction
 
 
 class NetboxGetDevice(NetboxBaseAction):
