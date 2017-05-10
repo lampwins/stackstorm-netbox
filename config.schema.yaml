@@ -12,11 +12,9 @@ api_token:
 use_https:
   description: "Use HTTPS when contacting the API"
   type: "boolean"
-  default: true
   required: true
 
 ssl_verify:
   description: "Verify ssl/tls protocol certs when contacting the API."
   type: "boolean"
-  default: true
   required: true
