@@ -20,7 +20,7 @@ class NetboxBaseAction(Action):
         """
 
         self.logger.info(self.config)
-        
+
         if self.config['use_https']:
             url = 'https://'
         else:
@@ -32,6 +32,10 @@ class NetboxBaseAction(Action):
             'Authorization': 'Token ' + self.config['api_token'],
             'Accept': 'application/json'
         }
+
+        # transform `id__in` if present
+        if kwargs.get('id__in'):
+            kwargs['id__in'] = ','.join(kwargs['id__in'])
 
         r = requests.get(url, verify=self.config['ssl_verify'], headers=headers, params=kwargs)
 

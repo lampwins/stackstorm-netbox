@@ -78,4 +78,6 @@ parameters:
   status:
     type: string
     description: Status of devices
-  
+  id__in:
+    type: list
+    description: List of Device IDs
