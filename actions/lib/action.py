@@ -15,7 +15,7 @@ class NetboxBaseAction(Action):
     def __init__(self, config):
         super(NetboxBaseAction, self).__init__(config)
 
-    def get(self, endpoint_uri):
+    def get(self, endpoint_uri, **kwargs):
         """Make a get request to the API URI passed in
         """
 
@@ -33,6 +33,6 @@ class NetboxBaseAction(Action):
             'Accept': 'application/json'
         }
 
-        r = requests.get(url, verify=self.config['ssl_verify'], headers=headers)
+        r = requests.get(url, verify=self.config['ssl_verify'], headers=headers, params=kwargs)
 
         return {'raw': r.json()}
