@@ -5,3 +5,9 @@ runner_type: "python-script"
 description: Get a device from netbox
 enabled: true
 entry_point: get_device.py
+parameters:
+    serial:
+        type: string
+        description: Serial number of the device
+        required: true
+        position: 1

@@ -2,6 +2,12 @@
 name: get_interfaces
 pack: netbox
 runner_type: "python-script"
-description: Get the interfaces from netbox
+description: Get the interfaces frm netbox
 enabled: true
 entry_point: get_interfaces.py
+parameters:
+    device_id:
+        type: string
+        description: ID of the device
+        required: true
+        position: 1
