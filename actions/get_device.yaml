@@ -9,5 +9,3 @@ parameters:
     serial:
         type: string
         description: Serial number of the device
-        required: true
-        position: 1

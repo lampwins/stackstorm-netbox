@@ -9,5 +9,3 @@ parameters:
     device_id:
         type: string
         description: ID of the device
-        required: true
-        position: 1
