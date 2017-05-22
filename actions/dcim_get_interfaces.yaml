@@ -1,0 +1,23 @@
+---
+name: dcim_get_interfaces
+pack: netbox
+runner_type: "python-script"
+description: Get interface(s) from netbox
+enabled: true
+entry_point: dcim_get_interfaces.py
+parameters:
+  form_factor:
+    type: integer
+    description: Form factor value
+  device_id:
+    type: integer
+    description: ID of the device
+  device:
+    type: string
+    description: Name of the device
+  name:
+    type: string
+    description: ID of the interface(s)
+  mac_address:
+    type: string
+    description: MAC Address of the interface
