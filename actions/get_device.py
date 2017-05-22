@@ -8,4 +8,4 @@ class NetboxGetDevice(NetboxBaseAction):
     def run(self, **kwargs):
         """Get a device by serial number"""
         endpoint_uri = '/api/dcim/devices/'
-        return self.get(endpoint_uri, kwargs)
+        return self.get(endpoint_uri, **kwargs)
