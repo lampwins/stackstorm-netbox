@@ -13,7 +13,7 @@ parameters:
     type: string
     description: Name of the VRF
   rd:
-    type: strind
+    type: string
     description: Route Distinguisher of the VRF
   id__in:
     type: array
