@@ -33,6 +33,10 @@ class NetboxBaseAction(Action):
             'Accept': 'application/json'
         }
 
+        # transform `in__id` if present
+        if kwargs.get('in__id'):
+            kwargs['in__id'] = ','.join(kwargs['in__id'])
+
         r = requests.get(url, verify=self.config['ssl_verify'], headers=headers, params=kwargs)
 
         return {'raw': r.json()}
