@@ -19,7 +19,7 @@ class NetboxBaseAction(Action):
         """Make a get request to the API URI passed in
         """
 
-        self.logger.info(self.config)
+        self.logger.info("Calling base get with kwargs: " + kwargs)
 
         if self.config['use_https']:
             url = 'https://'
