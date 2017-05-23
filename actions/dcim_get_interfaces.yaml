@@ -4,8 +4,11 @@ pack: netbox
 runner_type: "python-script"
 description: Get interface(s) from netbox
 enabled: true
-entry_point: dcim_get_interfaces.py
+entry_point: base_get_action.py
 parameters:
+  endpoint_uri:
+    immutable: true
+    default: /api/dcim/interfaces/
   form_factor:
     type: integer
     description: Form factor value

@@ -4,8 +4,11 @@ pack: netbox
 runner_type: "python-script"
 description: Get ip addresses from netbox
 enabled: true
-entry_point: ipam_get_ip_addresses.py
+entry_point: base_get_action.py
 parameters:
+  endpoint_uri:
+    immutable: true
+    default: /api/ipam/ip-addresses/
   family:
     type: string
     description: IP Address family

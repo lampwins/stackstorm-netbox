@@ -7,6 +7,6 @@ class NetboxBaseGetAction(NetboxBaseAction):
 
     def run(self, endpoint_uri, **kwargs):
         """Base get action
-        endpoint_uri is based from metadata file
+        endpoint_uri is pased from metadata file
         """
         return self.get(endpoint_uri, **kwargs)
