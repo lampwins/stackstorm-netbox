@@ -19,7 +19,7 @@ class NetboxBaseAction(Action):
         """Make a get request to the API URI passed in
         """
 
-        self.logger.info("Calling base get with kwargs: {}".format(kwargs))
+        self.logger.debug("Calling base get with kwargs: {}".format(kwargs))
 
         if self.config['use_https']:
             url = 'https://'
@@ -36,6 +36,7 @@ class NetboxBaseAction(Action):
         # transform `in__id` if present
         if kwargs.get('in__id'):
             kwargs['in__id'] = ','.join(kwargs['in__id'])
+            self.logger.debug('in__id fransformed to {}'.format(kwargs['in__id']))
 
         r = requests.get(url, verify=self.config['ssl_verify'], headers=headers, params=kwargs)
 
