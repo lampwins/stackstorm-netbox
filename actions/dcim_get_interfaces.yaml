@@ -21,3 +21,6 @@ parameters:
   mac_address:
     type: string
     description: MAC Address of the interface
+  id__in:
+    type: array
+    description: List of Interface IDs

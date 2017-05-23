@@ -36,7 +36,7 @@ class NetboxBaseAction(Action):
         # transform `in__id` if present
         if kwargs.get('id__in'):
             kwargs['id__in'] = ','.join(kwargs['id__in'])
-            self.logger.debug('id__in fransformed to {}'.format(kwargs['id__in']))
+            self.logger.debug('id__in transformed to {}'.format(kwargs['id__in']))
 
         r = requests.get(url, verify=self.config['ssl_verify'], headers=headers, params=kwargs)
 
