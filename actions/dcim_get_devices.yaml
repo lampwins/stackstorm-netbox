@@ -4,8 +4,11 @@ pack: netbox
 runner_type: "python-script"
 description: Get device(s) from netbox
 enabled: true
-entry_point: dcim_get_devices.py
+entry_point: base_get_action.py
 parameters:
+  endpoint_uri:
+    immutable: true
+    default: /api/dcim/devices/
   name:
     type: string
     description: Name of the device
