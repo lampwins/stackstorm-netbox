@@ -1,3 +1,6 @@
+# :rotating_light: This pack has moved to the official [StackStorm-Exchange](https://github.com/StackStorm-Exchange/stackstorm-netbox) :rotating_light:
+As such, this repo is now depricated. Please use the new repo above.
+
 # stackstorm-netbox
 Stackstorm pack for netbox integration
 
